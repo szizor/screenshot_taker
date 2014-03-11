@@ -1,0 +1,90 @@
+<% title "productshots" %>
+<%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
+<%= hidden_field_tag 'image_id', @stage.id if @stage%>
+<header id="productshots" class="thumbnails-holder">
+  <div class="thumbnails">
+    <ul class="clear">
+      <% for stage in @stages %>
+        <li class="<%= 'active' if stage.id == params[:id].to_i %>">
+          <div class="image-holder">
+            <%=link_to image_tag(stage.stage_image.thumb.url), productshot_url(stage), {:class => "placeitholder"} if stage.stage_image? %>
+            <% if stage.id == params[:id].to_i && stage.bg_less.present? %>
+              <%= form_tag('/productshots/change_bg', :method=>:get, :remote => true) do -%>
+                <%= hidden_field_tag "bg", '0' %>
+                <%= hidden_field_tag "stage", stage.id %>
+                <%= check_box_tag "bg", 1, true %>
+                <span>background<span>
+              <% end -%>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
+        <li class="last">
+          <div class="image-holder">
+            <p class="gothammedium">New Stages Are<br />Being Added<br />Constantly!</p>
+            <p class="gelpen"><span class="entypo">&#128227;</span> Subscribe below <img src="/images/ui/arrow-down.png" width="6" height="14" /></p>
+          </div>
+        </li>
+    </ul>
+  </div>
+</header>
+<div id="holder">
+  <div class="comp-image-holder">
+    <% if @stage && @stage.stage_image? %>
+      <% if @stage.image_type_id == 4 %>
+        <%= image_tag(@stage.stage_image.url, :id => 'image_holder')  %>
+      <% else %>
+        <%= image_tag(@stage.stage_image.free.url, :id => 'image_holder')  %>
+      <% end %>
+    <% end %>
+    <ul class="buttons-holder">
+      <li class="upload">
+        <input type="file" id="file" />
+        <button class="btn">Upload Image</button>
+      </li>
+      <li class="from_url">
+        <button class="btn">Grab Screenshot From URL</button>
+      </li>
+      <li class="share has-tooltip hidden">
+        <button class="btn"><span></span>Share This</button>
+        <div class="tooltip-wrapper bottom">
+          <div class="tooltip transparent">
+            <div class="header">
+              <input type="text" id="share_url" class="dark-ui" readonly>
+              <button id="copytoclipboard" class="dark-ui">Copy</button>
+            </div>
+            <div class="body">
+              <ul class="social-sharing clear">
+                <li class="twitter"></li>
+                <li class="facebook"></li>
+                <li class="gplus"></li>
+                <li class="pinterest"></li>
+                <li class="linkedin"></li>
+              </ul>
+            </div>
+            <div class="loading">
+              <%= image_tag("/images/ui/spinner.png") %>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- <li class="purchase">
+        <button class="btn"><span></span>Purchase</button>
+      </li> -->
+    </ul>
+    <div class="message"><span>Your screenshot is automatically deleted after 5 minutes unless you press "Share This"</span></div>
+    <div id="loader" class="hidden">
+      <%= image_tag("/images/ui/spinner.png") %>
+    </div>
+  </div>
+</div>
+<p id="upload" class="hidden">
+  <label>
+    Drag &amp; drop not supported, but you can still upload via this input field:<br />
+    <input type="file">
+  </label>
+</p>
+<script>
+  $('.thumbnails').animate({ scrollLeft: $('li.active').position().left }, 0, 'easeInOutExpo');
+</script>
+<%= javascript_include_tag 'uploader.js' %>

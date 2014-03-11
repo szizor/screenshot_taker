@@ -1,0 +1,40 @@
+@import 'normalize.css';
+
+@include font-face("BreeLightOblique", font-files(
+    "breeoblique_light-webfont.woff", woff,
+    "breeoblique_light-webfont.ttf", truetype,
+    "breeoblique_light-webfont.svg#BreeLightOblique", svg
+  ),"breeoblique_light-webfont.eot");
+
+@include font-face("EntypoRegular", font-files(
+    "entypo.woff", woff,
+    "entypo.ttf", truetype,
+    "entypo.svg#EntypoRegular", svg
+  ),"entypo.eot");
+
+@include font-face("GothamMedium", font-files(
+    "gotham-medium.woff", woff,
+    "gotham-medium.ttf", truetype,
+    "gotham-medium.svg#GothamMedium", svg
+  ),"gotham-medium.eot");
+
+@include font-face("GelPen", font-files(
+    "gelpen-webfont.woff", woff,
+    "gelpen-webfont.ttf", truetype,
+    "gelpen-webfont.svg#GothamMedium", svg
+  ),"gelpen-webfont.eot");
+
+.breelightoblique {font-family: 'BreeLightOblique';}
+.entypo {font-family: 'EntypoRegular';}
+.gothammedium {font-family: "GothamMedium";}
+.gelpen {font-family: "GelPen";}
+button {cursor: pointer; border: none;}
+.clear::after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0}
+.left {float: left}
+.right {float: right}
+.center {text-align: center}
+.hidden {display: none!important}
+::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.4);}
+:-moz-placeholder,
+::-moz-placeholder {color: rgba(255, 255, 255, 0.4);}
+:-ms-input-placeholder {color: rgba(255, 255, 255, 0.4);}

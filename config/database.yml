@@ -1,0 +1,21 @@
+development: &mysql
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: productshots_dev
+  pool: 5
+  username: root
+  password:
+
+test:
+  <<: *mysql
+  database: productshots_test
+
+staging:
+  <<: *mysql
+  database: productshots_production
+
+production:
+  <<: *mysql
+  database: productshots_production
+

@@ -1,0 +1,18 @@
+<% title "Edit Stage" %>
+
+<% case @stage.image_type %>
+<% when 1 %>
+  <%= render :partial => 'form' %>
+<% when 2 %>
+  <%= render :partial => 'form' %>
+<% when 3 %>
+  <%= render :partial => 'blender_form' %>
+<% when 4 %>
+  <%= render :partial => 'form' %>
+<% else %>
+  <%= render :partial => 'form' %>
+<% end %>
+<p>
+  <%= link_to "Show", @stage %> |
+  <%= link_to "View All", stages_path %>
+</p>

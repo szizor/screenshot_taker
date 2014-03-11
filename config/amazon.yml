@@ -1,0 +1,21 @@
+development: &development
+  s3_access_key: 'AKIAIOTB32MXNWEHSAHA'
+  s3_access_secret: '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'
+  s3_access_key_il: 'AKIAIDYZ6PESMDH2NUKA'
+  s3_access_secret_il: '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'
+  s3_bucket_il: 'freshout-image-library'
+  dropbox_token: "hbsmaxpmwu892rmw"
+  dropbox_secret: "yue7rkiglqkfeix"
+  RECURLY_SUBDOMAIN: "TestArzola"
+  RECURLY_API_KEY: "e65403c810084d5e96e968004d333f20"
+  RECURLY_JS_PRIVATE_KEY: "7bc0055fcb8648fab18fe9941a456c36"
+  RECURLY_SUBDOMAIN: "TestArzola"
+  ROLES: ["basic", "commercial"]
+test:
+  <<: *development
+
+staging:
+  <<: *development
+
+production:
+  <<: *development

@@ -1,0 +1,41 @@
+<script>
+  // $(function () {
+  //   $('#tag_parent_id').tokenInput('/admin/tags/search.json', { crossDomain: false, tokenLimit: 1, tokenValue: "id", preventDuplicates: true, theme: "facebook", prePopulate: $('#tag_parent_id').data('load') });
+  // });
+</script>
+<style>
+/*.token-input-list-facebook{
+  width: 500px !important;
+}*/
+</style>
+<%= form_for @tag, :html => { :class => 'form-horizontal' } do |f| %>
+  <% if @tag.errors.any? %>
+    <% for message in @tag.errors.full_messages %>
+      <div class="alert alert-error">
+        <a class="close" data-dismiss="alert">&#215;</a>
+        <%= content_tag :div, message, :id => "flash_error" %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <fieldset>
+    <div class="row">
+      <div class="span5">
+        <div class="control-group">
+          <%= f.label :name, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :name, :class => 'text_field' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-actions">
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+        <%= link_to 'Cancel', tags_path, :class => 'btn' %>
+      </div>
+    </div>
+
+  </fieldset>
+<% end %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @package.name %>
+</p>
+
+<p>
+  <b>Licence type:</b>
+  <%= @package.licence_type %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @package.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @package.height %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @package.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_package_path(@package) %> |
+<%= link_to 'Back', packages_path %>

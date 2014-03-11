@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>PlaceIt by Breezi - Generate Product Screenshots in Realistic Environments</title>
+    <meta name="description" content="Your iPhone, iPad and other device screenshots automatically processed on the fly to be placed within a realistic environment of your choosing">
+    <%= stylesheet_link_tag 'shared.css'%>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script type="text/javascript" src="/javascripts/libs/jquery.js"><\/script>')</script>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <%= yield %>
+    </div>
+    <footer content="contentinfo" class="clear">
+      <div class="container">
+        <div class="footer-left">
+          <span class="desc">Product shot created with</span>
+          <a href="http://placeit.net/?utm_source=p2p&utm_medium=flink&utm_campaign=single" title="PlaceIt by Breezi.com" class="placeit-holder">
+            <img src="/images/ui/place-it.png" alt="PlaceIt">
+          </a>
+        </div>
+        <div class="footer-right">
+          <a href="http://breezi.com/?utm_source=p2p&utm_medium=flink&utm_campaign=single" title="Responsive Web Design App for Designers" class="logo">
+            <span class="by"></span>
+            <img src="/images/ui/breezi-logo.png" alt="Responsive Web Design App for Designers">
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      $(function() {
+        $('#holder img').click(function() {
+          $(this).toggleClass('zoomed');
+          return false;
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-298928-25']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>

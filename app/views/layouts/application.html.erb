@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlaceIt by Breezi - Generate Product Screenshots in Realistic Environments</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Your iPhone, iPad and other device screenshots automatically processed on the fly to be placed within a realistic environment of your choosing">
+    <link rel="canonical" href="http://placeit.net"/>
+    <%= stylesheet_link_tag 'placeit.css'%>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <%= javascript_include_tag "jquery.min" %>
+    <%= javascript_include_tag "jquery-ui.min" %>
+    <%= javascript_include_tag "jquery_ujs", "h5utils.js" %>
+    <script>window.jQuery || document.write('<script type="text/javascript" src="/javascripts/libs/jquery.js"><\/script>')</script>
+    <script src="/javascripts/zclip/jquery.zclip.min.js"></script>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="flash_err" class="flash_wrapper">
+      <div id="flash_error"></div>
+      <div id="flash_notice"></div>
+      <span class="flash_close center">×</span>
+    </div>
+    <div id="container">
+      <%= yield %>
+    </div>
+    <footer content="contentinfo" class="clear">
+      <div class="container clear">
+        <div class="footer-left">
+          <a href="http://freshout.us/" title="San Francisco Web Development" class="crafted-by">
+            <img src="/images/ui/crafted-by-freshout.png" alt="San Francisco Web Development">
+          </a>
+          <a href="http://breezi.com/" title="Responsive Web Design App for Designers" class="for-breezi">
+            <img src="/images/ui/for-breezi.png" alt="Responsive Web Design App for Designers">
+          </a>
+        </div>
+        <div class="footer-center">
+        </div>
+        <div class="footer-right">
+          <ul class="social">
+            <li class="entypo cc has-tooltip on-hover">
+              <div class="tooltip-wrapper top">
+                <div class="tooltip transparent">
+                  <span class="simple">Images are ok to use for commercial purposes</span>
+                </div>
+              </div>
+              <a href="http://breezi.com/blog/using-placeit-images-for-commercial-purposes/" class="icn" title="Images are ok to use for commercial purposes" target="_blank">&#128325;</a>
+            </li>
+            <li class="entypo mail has-tooltip on-hover">
+              <div class="tooltip-wrapper top">
+                <div class="tooltip transparent">
+                  <span class="simple">Email Us</span>
+                </div>
+              </div>
+              <a href="mailto:placeit@breezi.com" class="icn" title="Get in touch, sent us an email">&#9993;</a>
+            </li>
+            <li class="entypo megaphone has-tooltip on-hover">
+              <div class="tooltip-wrapper top">
+                <div class="tooltip shadow">
+                  <div class="header breelightoblique center">Get Notified When We Add New Stuff!</div>
+                  <div class="body clear">
+                    <input type="text" placeholder="Email" class="dark-ui left subscribe-rss-input" />
+                    <button class="dark-ui left subscribe-rss-btn">Subscribe</button>
+                    <a href="http://feeds.feedburner.com/placeit" target="_blank" class="entypo rss dark-ui button left">&#59194;</a>
+                  </div>
+                </div>
+              </div>
+              <span class="icn">&#128227;</span>
+            </li>
+            <li class="twitter">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://placeit.net" data-via="breeziapp">Tweet</a>
+            </li>
+            <li class="facebook">
+              <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fplaceit.breezi.com%2F&amp;send=false&amp;layout=button_count&amp;width=85&amp;show_faces=false&amp;font=arial&amp;colorscheme=dark&amp;action=like&amp;height=21&amp;locale=en_US" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;" allowTransparency="true"></iframe>
+            </li>
+            <li class="google-plus">
+              <div class="g-plusone" data-size="medium" data-href="http://placeit.net"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>/* twitter */!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>/* gplus */(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+    <script src="//assets.pinterest.com/js/pinit.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-298928-25']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

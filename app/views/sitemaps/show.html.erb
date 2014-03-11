@@ -1,0 +1,39 @@
+<h1>Listing Screens</h1>
+<style>
+.container {
+width: auto;
+max-width: 1400px;
+}
+.odd {
+  background-color: #dff0d8 !important;
+}
+..even {
+  background-color: #f2dede !important;
+}
+</style>
+<table width="100%">
+  <tr>
+    <th>Id</th>
+    <th>Url</th>
+    <th>Processed</th>
+    <th>DropBox path</th>
+    <th>Actions</th>
+  </tr>
+
+<% @sitemap.screens.each do |screen| %>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= screen.id %></td>
+    <td><%= link_to screen.url, screen.url, :target => "_blank" %></td>
+    <td  align="center"><%= screen.processed %></td>
+    <td><%= link_to screen.image_path, screen.image_path, :target => "_blank" if screen.image_path %></td>
+    <td>
+      <div class="">
+        <%#= link_to 'Edit', edit_screen_path(sitemap) %>
+        <%= link_to 'Destroy', sitemap_screen_path(@sitemap,screen), :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Back', sitemaps_path %>

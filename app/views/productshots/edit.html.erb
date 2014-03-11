@@ -1,0 +1,12 @@
+<h1>Editing productshot</h1>
+
+<% form_for(@productshot) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @productshot %> |
+<%= link_to 'Back', productshots_path %>
