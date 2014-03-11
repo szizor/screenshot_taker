@@ -20,4 +20,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ProductShots::Application.load_tasks
+ScreenShots::Application.load_tasks

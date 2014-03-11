@@ -31,9 +31,6 @@ GEM
     acts-as-taggable-on (2.4.1)
       rails (>= 3, < 5)
     acts_as_list (0.1.9)
-    airbrake (3.1.14)
-      builder
-      json
     arel (3.0.2)
     aws-s3 (0.6.3)
       builder
@@ -41,10 +38,6 @@ GEM
       xml-simple
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
-    carrierwave (0.9.0)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      json (>= 1.7)
     chronic (0.10.2)
     chunky_png (1.2.8)
     coffee-rails (3.2.2)
@@ -144,8 +137,6 @@ GEM
     rake (0.8.7)
     rdoc (3.12.2)
       json (~> 1.4)
-    recurly (2.1.9)
-    rmagick (2.13.2)
     ruby-hmac (0.4.0)
     sass (3.2.12)
     sass-rails (3.2.6)
@@ -184,10 +175,8 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (= 2.4.1)
   acts_as_list (= 0.1.9)
-  airbrake (= 3.1.14)
   aws-s3 (= 0.6.3)
   bcrypt-ruby (~> 3.0.0)
-  carrierwave (= 0.9.0)
   coffee-rails (~> 3.2.1)
   compass-colors (= 0.9.0)
   compass-rails (~> 1.0.0.rc.2)
@@ -204,8 +193,6 @@ DEPENDENCIES
   rails (= 3.2.9)
   rails3-generators (~> 0.17.4)
   rake (= 0.8.7)
-  recurly (~> 2.1.8)
-  rmagick (= 2.13.2)
   sass-rails (~> 3.2.3)
   sassy-buttons (= 0.2.6)
   uglifier (>= 1.0.3)

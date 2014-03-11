@@ -1,6 +1,6 @@
 class SitemapsController < ApplicationController
   before_filter :authenticate
-  skip_before_filter :authenticate_user!
+  # skip_before_filter :authenticate_user!
   layout "sitemap"
 
   def index

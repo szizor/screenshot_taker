@@ -2,20 +2,20 @@ development: &mysql
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: productshots_dev
+  database: screenshots_dev
   pool: 5
   username: root
   password:
 
 test:
   <<: *mysql
-  database: productshots_test
+  database: screenshots_test
 
 staging:
   <<: *mysql
-  database: productshots_production
+  database: screenshots_production
 
 production:
   <<: *mysql
-  database: productshots_production
+  database: screenshots_production
 
