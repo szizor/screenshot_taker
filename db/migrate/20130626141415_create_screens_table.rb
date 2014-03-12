@@ -3,7 +3,7 @@ class CreateScreensTable < ActiveRecord::Migration
     create_table :screens do |t|
       t.string :name
       t.string :url
-      t.boolean :processed, :default => 0
+      t.boolean :processed, :default => false
       t.integer :installation_id
       t.integer :sitemap_id
       t.string :image_path
