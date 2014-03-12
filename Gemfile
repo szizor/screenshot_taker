@@ -6,7 +6,7 @@ gem 'rake', '0.8.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'unicorn', '4.3.1'
 
-gem 'mysql2', '0.3.13'
+gem 'sqlite3'
 gem 'acts_as_list', '0.1.9'
 gem 'jquery-rails', '3.0.4'
 gem "rails3-generators", '~> 0.17.4'
