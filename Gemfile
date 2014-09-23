@@ -41,5 +41,5 @@ group :assets do
 end
 group :development, :test do
   # gem "ruby-debug" #uncomment for ruby 1.8
-  # gem "debugger" #uncomment for ruby 1.9
+  gem "debugger" #uncomment for ruby 1.9
 end
