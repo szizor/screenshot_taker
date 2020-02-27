@@ -20,7 +20,7 @@ gem 'whenever', '0.8.4', :require => false
 #gem 'carrierwave', '0.9.0'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "dropbox-api", '0.4.1'
-gem 'nokogiri', '~> 1.4.4'
+gem "nokogiri", ">= 1.10.8"
 gem "will_paginate", "~> 3.0.pre2"
 gem 'jpbuilder', '0.2.2'
 gem 'fog', '0.8.2'
