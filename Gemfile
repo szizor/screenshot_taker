@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem "rails", ">= 3.2.17"
 gem 'rake', '0.8.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,7 +8,7 @@ gem 'unicorn', '4.3.1'
 
 gem 'pg'
 gem 'acts_as_list', '0.1.9'
-gem 'jquery-rails', '3.0.4'
+gem "jquery-rails", ">= 3.1.3"
 gem "rails3-generators", '~> 0.17.4'
 gem 'delayed_job_active_record', '4.0.0'
 gem 'foreman', '0.63.0'
